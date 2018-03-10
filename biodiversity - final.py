@@ -324,7 +324,7 @@ str2 = 'This string contains Cows'
 # In[25]:
 
 
-species['is_sheep'] = species.common_names.apply(lambda x: True if 'Sheep' in x else False)
+species['is_sheep'] = species.common_names.apply(lambda x: 'Sheep' in x)
 species.head()
 
 
@@ -333,7 +333,7 @@ species.head()
 # In[26]:
 
 
-species[species.is_sheep == True]
+species[species.is_sheep]
 
 
 # Many of the results are actually plants.  Select the rows of `species` where `is_sheep` is `True` and `category` is `Mammal`.  Save the results to the variable `sheep_species`.
